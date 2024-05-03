@@ -9,7 +9,9 @@ kubectl create ns sre
 helm install upcommerce ./upcommerce -n sre
 
 ```
-![Alt text](images/Screenshot 2024-05-03 112947.png)
+
+![Description of image1](images/8.png)
+
  ### Confirm the deployment
 ```
 kubectl get deployment -n sre
@@ -18,6 +20,8 @@ or check the pod
 ```
 kubectl get po -n sre
 ```
+
+![Description of image1](images/7.png)
 ## Create Canary Version:
 
 canary-deployment.yml
@@ -71,20 +75,26 @@ canary:
 
 Check deployment
 ```
+kubectl get deployment -n sre
 ```
 
 Or list the pod
-```
-```
+
+![Description of image1](images/6.png)
 
 List helm releases
 ```
+helm list -a
 ```
+![Description of image1](images/3.png)
 
 ## Confirm Rollback
 
 ```
+helm rollback upcommerce 2 -n sre
 ```
-
+![Description of image1](images/2.png)
 ```
+helm list -a
 ```
+![Description of image1](images/1.png)
