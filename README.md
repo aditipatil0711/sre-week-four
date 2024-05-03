@@ -9,7 +9,7 @@ kubectl create ns sre
 helm install upcommerce ./upcommerce -n sre
 
 ```
-[!Alt]
+![Alt text](images/Screenshot 2024-05-03 112947.png)
  ### Confirm the deployment
 ```
 kubectl get deployment -n sre
